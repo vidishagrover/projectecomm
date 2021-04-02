@@ -1,0 +1,57 @@
+[{
+  "_id": {
+    "$oid": "5eee651f739f8c674fd736ee"
+  },
+  "name": "Tandoori Vegetable Platter",
+  "image": "",
+  "price": "350"
+},{
+  "_id": {
+    "$oid": "5eee6671a27a66807cf2bea3"
+  },
+  "name": "Mezze Platter",
+  "image": "",
+  "price": "350"
+},{
+  "_id": {
+    "$oid": "5eee6692a27a66807cf2bea4"
+  },
+  "name": "Cheese Platter",
+  "image": "",
+  "price": "300"
+},{
+  "_id": {
+    "$oid": "5eee66a5a27a66807cf2bea5"
+  },
+  "name": "Sandwich Platter",
+  "image": "",
+  "price": "300"
+},{
+  "_id": {
+    "$oid": "5eee66c4a27a66807cf2bea6"
+  },
+  "name": "Spaghetti Napolitan",
+  "image": "",
+  "price": "290"
+},{
+  "_id": {
+    "$oid": "5eee66cfa27a66807cf2bea7"
+  },
+  "name": "Peene Arrabbiat",
+  "image": "",
+  "price": "290"
+},{
+  "_id": {
+    "$oid": "5eee66eea27a66807cf2bea8"
+  },
+  "name": "Penne with Mushroom and Blue Cheese  ",
+  "image": "",
+  "price": "350"
+},{
+  "_id": {
+    "$oid": "5eee6717a27a66807cf2bea9"
+  },
+  "name": "White Sauce Pasta",
+  "image": "",
+  "price": "350"
+}]

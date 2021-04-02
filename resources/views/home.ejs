@@ -1,0 +1,240 @@
+
+    <section class="home py-8">
+        <div class="row container mx-auto flex items-center justified-between">
+            <div class="col-lg-6 ">
+                <div>
+                    <h6 class="text-lg"><em>Clothes mean nothing until someone lives in them</em></h6>
+                    <h1 class="text-3xl md:text-5xl font-bold">People will stare make it worth!</h1>
+                    <button class="browse px-6 py-2 rounded-full font-bold mt-2 mb-4">Browse More</button>
+                </div>
+            </div>
+            <div class="col-lg-6 ">
+                <div>
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://images.unsplash.com/photo-1529903056346-94341d9428e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=401&q=80"
+                                    class="d-block w-100 testimonial-image " alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://images.unsplash.com/photo-1572804013427-4d7ca7268217?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80"
+                                    class="d-block w-100 testimonial-image" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://images.unsplash.com/photo-1588063765533-8c50d519194b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+                                    class="d-block w-100  testimonial-image" alt="...">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- WOMEN -->
+    <section class="designs container mx-auto py-8">
+        <h1 class="text-xl font-bold mb-8">Pick Your Favourites</h1>
+        <div class="grid grid-cols-2 lg:grid-cols-3  xl:grid-cols-4 col-gap-12 row-gap-16">
+            <% clothes.forEach(function(cloth){ %>
+                <div class="w-full  md:w-64">
+                    <img class="mx-auto  mb-4" src="/img/<%= cloth.image %>">
+                    <!-- <img class="mx-auto mb-4"
+                        src="https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/11523522/2020/9/2/4a27d6c7-0b51-44f0-aee2-90fee04d325f1599061939179-ONLY-Women-White-Printed-Round-Neck-T-shirt-6931599061937710-1.jpg"> -->
+                    <div class="text-center">
+                        <h2 class="mb-4 text-lg"><%= cloth.name %></h2>
+                        <span class=" size py-1 px-4 rounded-full uppercase text-xs"><%= cloth.description %></span>
+                        <div class="flex items-center justify-between mt-6">
+                            <span class="font-bold text-lg">Rs. <%= cloth.price %></span>
+                            <button data-cloth="<%= JSON.stringify(cloth)%>" class="add py-1 px-6 rounded-full flex items-center font-bold">
+                                <span>Add to cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+           <% })%>
+            <!-- <div>
+                <img class="mx-auto mb-4"
+                    src="https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/11523522/2020/9/2/4a27d6c7-0b51-44f0-aee2-90fee04d325f1599061939179-ONLY-Women-White-Printed-Round-Neck-T-shirt-6931599061937710-1.jpg">
+                <div class="text-center">
+                    <h2 class="mb-4 text-lg">ONLY</h2>
+                    <span class=" size py-1 px-4 rounded-full uppercase text-xs">Striped Waist Tie-Up Tshirt</span>
+                    <div class="flex items-center justify-between mt-6">
+                        <span class="font-bold text-lg">Rs.1039</span>
+                        <button class="add py-1 px-6 rounded-full flex items-center font-bold">
+                            <span>Add to cart</span>
+                        </button>
+                    </div>
+                </div>
+            </div> -->
+            <!-- <div>
+                <img class="mx-auto mb-4"
+                    src="https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/7719007/2018/11/19/1cac68d7-2389-48c8-b6d0-0a16c7d4236b1542608837264-Libas-Women-Dresses-9261542608836986-1.jpg">
+                <div class="text-center">
+                    <h2 class="mb-4 text-lg">LIBAS</h2>
+                    <span class=" size py-1 px-4 rounded-full uppercase text-xs">Block Print Maxi Dress</span>
+                    <div class="flex items-center justify-between mt-6">
+                        <span class="font-bold text-lg">Rs.1150</span>
+                        <button class="add py-1 px-6 rounded-full flex items-center font-bold">
+                            <span>Add to cart</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img class="mx-auto mb-4"
+                    src="https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2019/8/19/0da335e3-4827-4c6c-9032-1e0e7211644a1566205364364-1.jpg">
+                <div class="text-center">
+                    <h2 class="mb-4 text-lg">H&M</h2>
+                    <span class=" size py-1 px-4 rounded-full uppercase text-xs">Super Skinny High Jeans</span>
+                    <div class="flex items-center justify-between mt-6">
+                        <span class="font-bold text-lg">Rs.1499</span>
+                        <button class="add py-1 px-6 rounded-full flex items-center font-bold">
+                            <span>Add to cart</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img class="mx-auto mb-4"
+                    src="https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/7320165/2018/9/14/ffacac36-d3ad-4575-af2a-70043199fe9d1536904066226-Libas-Women-Kurtis-9301536904066080-1.jpg">
+                <div class="text-center">
+                    <h2 class="mb-4 text-lg">LIBAS</h2>
+                    <span class=" size py-1 px-4 rounded-full uppercase text-xs">Embroidered A-Line Kurti</span>
+                    <div class="flex items-center justify-between mt-6">
+                        <span class="font-bold text-lg">Rs.824</span>
+                        <button class="add py-1 px-6 rounded-full flex items-center font-bold">
+                            <span>Add to cart</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </section>
+     <!-- MEN -->
+    <!-- <section class="designs container mx-auto py-8">
+        <h1 class="text-xl font-bold mb-8">MEN</h1>
+        <div class="grid grid-cols-4 col-gap-12 row-gap-16">
+        
+
+            <div>
+                <img class="mx-auto mb-4"
+                    src="https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/1729391/2019/8/28/a9d4a7aa-af7e-4a37-a9d4-a94dc8c057e81566992341974-WROGN-Navy-Blue-Slim-Fit-Checked-Casual-Shirt-52415669923403-1.jpg">
+                <div class="text-center">
+                    <h2 class="mb-4 text-lg">WROGN</h2>
+                    <span class=" size py-1 px-4 rounded-full uppercase text-xs">Checked Casual Shirt</span>
+                    <div class="flex items-center justify-between mt-6">
+                        <span class="font-bold text-lg">Rs.1429</span>
+                        <button class="add py-1 px-6 rounded-full flex items-center font-bold">
+                            <span>Add to cart</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img class="mx-auto mb-4"
+                    src="https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/10476222/2019/8/17/95ce2d16-4e35-45e2-aa7c-1521dfb707261566044391544-LUXURAZI-Men-Maroon-Solid-Slim-Fit-Tuxedo-Two-Piece-Suit-219-1.jpg">
+                <div class="text-center">
+                    <h2 class="mb-4 text-lg">LUXURAZI</h2>
+                    <span class=" size py-1 px-4 rounded-full uppercase text-xs">Men Two-Piece Suit</span>
+                    <div class="flex items-center justify-between mt-6">
+                        <span class="font-bold text-lg">Rs.7700</span>
+                        <button class="add py-1 px-6 rounded-full flex items-center font-bold">
+                            <span>Add to cart</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img class="mx-auto mb-4"
+                    src="https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/1/24/81e30537-9b1f-4a7d-b615-991669971b0a1579818268310-1.jpg">
+                <div class="text-center">
+                    <h2 class="mb-4 text-lg">RED TAPE</h2>
+                    <span class=" size py-1 px-4 rounded-full uppercase text-xs">Skinny Fit Jeans</span>
+                    <div class="flex items-center justify-between mt-6">
+                        <span class="font-bold text-lg">Rs.1049</span>
+                        <button class="add py-1 px-6 rounded-full flex items-center font-bold">
+                            <span>Add to cart</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img class="mx-auto mb-4"
+                    src="https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/7441169/2018/10/23/a0d9c707-78ea-4500-abcc-86d83ba1ca971540273212226-House-of-Pataudi-Men-Olive-Green-Embroidered-Straight-Kurta-9631540273212058-1.jpg">
+                <div class="text-center">
+                    <h2 class="mb-4 text-lg">HOUSE OF PATAUDI</h2>
+                    <span class=" size py-1 px-4 rounded-full uppercase text-xs">Embroidered Straight Kurta</span>
+                    <div class="flex items-center justify-between mt-6">
+                        <span class="font-bold text-lg">Rs.2799</span>
+                        <button class="add py-1 px-6 rounded-full flex items-center font-bold">
+                            <span>Add to cart</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section> -->
+    <!-- KIDS-->
+    <!-- <section class="designs container mx-auto py-8">
+        <h1 class="text-xl font-bold mb-8">KIDS</h1>
+        <div class="grid grid-cols-4 col-gap-12 row-gap-16">
+            <div>
+                <img class="mx-auto mb-4"
+                    src="https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/11737208/2020/9/17/e74e5b59-df17-4c9b-b235-94e9687936931600337880639-mothercare-Girls-Tshirts-4911600337879005-1.jpg">
+                <div class="text-center">
+                    <h2 class="mb-4 text-lg">MISS & CHIEF</h2>
+                    <span class=" size py-1 px-4 rounded-full uppercase text-xs">Girls Pack of 2-Tshirt</span>
+                    <div class="flex items-center justify-between mt-6">
+                        <span class="font-bold text-lg">Rs.999</span>
+                        <button class="add py-1 px-6 rounded-full flex items-center font-bold">
+                            <span>Add to cart</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img class="mx-auto mb-4"
+                    src="https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/11749168/2020/9/23/a55e1222-bc9b-40e7-b179-4efd253202141600859140664-Miss--Chief-Boys-Pack-of-2-Round-Neck-T-shirts-1971600859139-1.jpg">
+                <div class="text-center">
+                    <h2 class="mb-4 text-lg">MISS & CHIEF</h2>
+                    <span class=" size py-1 px-4 rounded-full uppercase text-xs">BOYS Pack of 2-Tshirt</span>
+                    <div class="flex items-center justify-between mt-6">
+                        <span class="font-bold text-lg">Rs.999</span>
+                        <button class="add py-1 px-6 rounded-full flex items-center font-bold">
+                            <span>Add to cart</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img class="mx-auto mb-4"
+                    src="https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/7115835/2019/1/30/812b0a84-b5e6-421a-ada7-ea526e11658b1548836580390-GAP-Girls-Blue-Stretch-Super-Skinny-Jeans--1381548836579320-1.jpg">
+                <div class="text-center">
+                    <h2 class="mb-4 text-lg">GAP</h2>
+                    <span class=" size py-1 px-4 rounded-full uppercase text-xs">Girls Skinny Jeans</span>
+                    <div class="flex items-center justify-between mt-6">
+                        <span class="font-bold text-lg">Rs.1379</span>
+                        <button class="add py-1 px-6 rounded-full flex items-center font-bold">
+                            <span>Add to cart</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img class="mx-auto mb-4"
+                    src="https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/7/29/4881b037-871b-479b-a957-6be9b38ecd1f1595973923031-1.jpg">
+                <div class="text-center">
+                    <h2 class="mb-4 text-lg">H&M</h2>
+                    <span class=" size py-1 px-4 rounded-full uppercase text-xs">BOYS SKINNY JEANS</span>
+                    <div class="flex items-center justify-between mt-6">
+                        <span class="font-bold text-lg">Rs.1039</span>
+                        <button class="add py-1 px-6 rounded-full flex items-center font-bold">
+                            <span>Add to cart</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
